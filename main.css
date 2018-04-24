@@ -1,0 +1,23 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.parametro {
+    display: inline;
+}
+
+.contas {
+    display: inline;
+}
+
+.erro {
+    color: red;
+}

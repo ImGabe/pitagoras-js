@@ -7,41 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
     <script src="main.js"></script>
 </head>
 <body>
-    <h1>Pitágoras</h1>
-    <h2>Biografia</h2>
+    <h1 class="title1">Pitágoras</h1>
+    <h2 class="title">Biografia</h2>
 
     <p>
     Pitágoras de Samos foi um dos grandes filósofos pré-socráticos e matemáticos da Grécia Antiga.
     </p>
 
-    <h3>Fórmula</h3>
-
-    <p><strong>Teorema de Pitágoras</strong></p>
+    <h3 class="title">Teorema de Pitágoras</h3>
     <!--Conjuto com toda a estrutura-->
     <div class="conjuto">
         <!--Bloco com as contas-->
         <div class="bloco" ng-app="myApp" ng-controller="myCtrl">
-            <p>Hipotenusa: <input type="text" ng-model="Hip"></p>
-            <p>Cateto oposto: <input type="text" ng-model="Co"></p>
-            <p>Catedo adjacente: <input type="text" ng-model="Ca"></p>
+            <div class="parametro">
+                <p>Hipotenusa: <input class="hip" type="number" ng-model="Hip" onchange="test()"></p>
+                <p>Cateto oposto: <input class="co" type="number" ng-model="Co" onchange="test()"></p>
+                <p>Catedo adjacente: <input class="ca" type="number" ng-model="Ca" onchange="test()"></p>
+            </div>
             <!--Contas-->
             <div class="contas">
                 <p>{{Hip}}² = {{Co}}² + {{Ca}}²</p>
 
                 <p>{{Hip * Hip}} = {{Co * Co}} + {{Ca * Ca}}</p>
 
-                <p>{{Hip * Hip}} = {{Co * Co + Ca * Ca}}</p>
+                <p>{{Hip * Hip}} = {{Co * Co + Ca * Ca}} <span class="erro"></span></p> 
             </div>
         </div>
-        <!--Bloco com as imgs-->
-        <div class="bloco2">
-        <p><strong>Demostração no triangulo retágulo</strong></p>
-        <img src="" alt="triângulo retângulo pitagórico">
-        </div>
-
     </div>
 </body>
 </html>

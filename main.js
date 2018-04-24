@@ -11,3 +11,39 @@ app.controller('myCtrl', function($scope) {
     $scope.Co= 4;
     $scope.Ca= 3;
 });
+
+function test() {
+
+    // Hipotenusa
+    var x = document.getElementsByClassName("hip")[0];
+    var hip = x.value;
+
+    // Caceto oposto
+    var y = document.getElementsByClassName("co")[0];
+    var co = y.value;
+
+    // Caceto adjacente
+    var z = document.getElementsByClassName("ca")[0];
+    var ca = z.value;
+
+    // Teorema
+
+    var hip2 = hip * hip;
+    var co2 = co * co;
+    var ca2 = ca * ca;
+    var pit = hip2 == co2 + ca2;
+
+    console.log(hip2);
+    console.log(co2);
+    console.log(ca2);
+
+    // Acerto/Error
+    var error = document.getElementsByClassName("erro")[0];
+
+    if(!pit) {
+        error.innerHTML = "Errado";
+        console.log("Errado");
+    } else {
+        error.innerHTML = " ";
+    };
+};
