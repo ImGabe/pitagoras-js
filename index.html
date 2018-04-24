@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TemplateJs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Pitágoras</h1>
+    <h2>História</h2>
+
+    <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    Molestiae esse amet fugiat beatae eum distinctio dolor nam, perferendis, ratione accusantium nesciunt, et impedit omnis dolorum! 
+    Perferendis corporis consectetur nobis pariatur.
+    </p>
+
+    <h3>Fórmula</h3>
+
+    <p><strong>Teorema de Pitágoras</strong></p>
+    <!--Conjuto com toda a estrutura-->
+    <div class="conjuto">
+        <!--Bloco com as contas-->
+        <div class="bloco" ng-app="myApp" ng-controller="myCtrl">
+            <p>Hipotenusa: <input type="text" ng-model="Hip"></p>
+            <p>Cateto oposto: <input type="text" ng-model="Co"></p>
+            <p>Catedo adjacente: <input type="text" ng-model="Ca"></p>
+            <!--Contas-->
+            <div class="contas">
+                <p>{{Hip}}² = {{Co}}² + {{Ca}}²</p>
+
+                <p>{{Hip * Hip}} = {{Co * Co}} + {{Ca * Ca}}</p>
+
+                <p>{{Hip * Hip}} = {{Co * Co + Ca * Ca}}</p>
+            </div>
+        </div>
+        <!--Bloco com as imgs-->
+        <div class="bloco2">
+        <p><strong>Demostração no triangulo retágulo</strong></p>
+        </div>
+
+    </div>
+</body>
+</html>
