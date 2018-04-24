@@ -7,7 +7,7 @@ console.log("Hellow World!")
 var app = angular.module('myApp', []);
 
 app.controller('myCtrl', function($scope) {
-    $scope.Hip= "5";
-    $scope.Co= "4";
-    $scope.Ca= "3";
+    $scope.Hip= 5;
+    $scope.Co= 4;
+    $scope.Ca= 3;
 });
