@@ -2,4 +2,4 @@
 
 ## Como usar:
 
-**Acesse esse site:** <https://pitagoras.glitch.me/>
+**Acesse esse site:** <https://chibipandaneko.github.io/> ou <https://pitagoras.glitch.me/>
