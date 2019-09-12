@@ -1,49 +1,20 @@
-// Hello World! :)
-console.log("Hellow World!")
+let cata = document.getElementById("cat-a");
+let catb = document.getElementById("cat-b");
+let hipc = document.getElementById("hip-c");
+let out = document.getElementById("result");
 
-// Angular JS
+let solver = (a = NaN, b = NaN, c = NaN) => {
+    return Math.sqrt(c - b) || Math.sqrt(c - a) || Math.sqrt(a + b) || "Não consigo calcular...";
+}
 
-// Parametros definidos como 3, 4 ,5
-var app = angular.module('myApp', []);
+function result() {
+    let a = parseInt(cata.value) ** 2;
+    let b = parseInt(catb.value) ** 2;
+    let c = parseInt(hipc.value) ** 2;
 
-app.controller('myCtrl', function($scope) {
-    $scope.Hip= 5;
-    $scope.Co= 4;
-    $scope.Ca= 3;
-});
+    (a + b == c) ? out.innerHTML = `${a} + ${b} = ${c}` : out.innerHTML = solver(a, b, c);
+}
 
-function test() {
-
-    // Hipotenusa
-    var x = document.getElementsByClassName("hip")[0];
-    var hip = x.value;
-
-    // Caceto oposto
-    var y = document.getElementsByClassName("co")[0];
-    var co = y.value;
-
-    // Caceto adjacente
-    var z = document.getElementsByClassName("ca")[0];
-    var ca = z.value;
-
-    // Teorema
-
-    var hip2 = hip * hip;
-    var co2 = co * co;
-    var ca2 = ca * ca;
-    var pit = hip2 == co2 + ca2;
-
-    console.log(hip2);
-    console.log(co2);
-    console.log(ca2);
-
-    // Acerto/Error
-    var error = document.getElementsByClassName("erro")[0];
-
-    if(!pit) {
-        error.innerHTML = "Errado";
-        console.log("Errado");
-    } else {
-        error.innerHTML = " ";
-    };
-};
+cata.addEventListener("input", result);
+catb.addEventListener("input", result);
+hipc.addEventListener("input", result);

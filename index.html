@@ -1,42 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pitágoras</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teorema de Pitágora</title>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
-    <script src="main.js"></script>
+
 </head>
+
 <body>
-    <h1 class="title1">Pitágoras</h1>
-    <h2 class="title">Biografia</h2>
+    <h1 id="title">Teorema de Pitágoras</h1>
 
-    <p>
-    Pitágoras de Samos foi um dos grandes filósofos pré-socráticos e matemáticos da Grécia Antiga.
-    </p>
+    <p class="text"><i>"A soma dos quadrados dos catetos é igual ao quadrado da hipotenusa."</i></p>
+    <p class="text">a² + b² = c²</p>
 
-    <h3 class="title">Teorema de Pitágoras</h3>
-    <!--Conjuto com toda a estrutura-->
-    <div class="conjuto">
-        <!--Bloco com as contas-->
-        <div class="bloco" ng-app="myApp" ng-controller="myCtrl">
-            <div class="parametro">
-                <p>Hipotenusa: <input class="hip" type="number" ng-model="Hip" input="test()"></p>
-                <p>Cateto oposto: <input class="co" type="number" ng-model="Co" input="test()"></p>
-                <p>Catedo adjacente: <input class="ca" type="number" ng-model="Ca" input="test()"></p>
-            </div>
-            <!--Contas-->
-            <div class="contas">
-                <p>{{Hip}}² = {{Co}}² + {{Ca}}²</p>
-
-                <p>{{Hip * Hip}} = {{Co * Co}} + {{Ca * Ca}}</p>
-
-                <p>{{Hip * Hip}} = {{Co * Co + Ca * Ca}} <span class="erro"></span></p> 
-            </div>
+    <div id="app">
+        <div id="inputs">
+            <input type="number" min="1" id="cat-a" class="number-input">
+            <input type="number" min="1" id="cat-b" class="number-input">
+            <input type="number" min="1" id="hip-c" class="number-input">
         </div>
+        <div id=result class="text"></div>
     </div>
+
+    <p class="text">Não coloque nenhum número para ele tentar descobrir.</p>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
