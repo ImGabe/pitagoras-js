@@ -11,8 +11,7 @@ function result() {
     let a = parseInt(cata.value) ** 2;
     let b = parseInt(catb.value) ** 2;
     let c = parseInt(hipc.value) ** 2;
-
-    (a + b == c) ? out.innerHTML = `${a} + ${b} = ${c}` : out.innerHTML = solver(a, b, c);
+    out.innerHTML = (a + b == c) ? `${a} + ${b} = ${c}` : (!a || !b || !c) ? solver(a, b, c) : `A conta está errada...`;
 }
 
 cata.addEventListener("input", result);
