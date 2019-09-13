@@ -7,23 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Teorema de Pitágora</title>
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 
 </head>
 
 <body>
     <h1 id="title">Teorema de Pitágoras</h1>
+    <p></p><i>"A soma dos quadrados dos catetos é igual ao quadrado da hipotenusa."</i></p>
+    <div class="math"> \[ a^2 + b^2 = c^2 \] </div>
 
-    <p class="text"><i>"A soma dos quadrados dos catetos é igual ao quadrado da hipotenusa."</i></p>
-    <p class="text">a² + b² = c²</p>
-
-    <div id="app">
-        <div id="inputs">
-            <input type="number" min="1" id="cat-a" class="number-input">
-            <input type="number" min="1" id="cat-b" class="number-input">
-            <input type="number" min="1" id="hip-c" class="number-input">
-        </div>
-        <div id=result class="text"></div>
+    <div class="flex-center">
+        <input type="number" min="1" id="cat-a" class="number-input">
+        <input type="number" min="1" id="cat-b" class="number-input">
+        <input type="number" min="1" id="hip-c" class="number-input">
     </div>
+
+    <div id=result></div>
+
+    <div class="flex-center">
+        <div class="math">\[ a = \sqrt{c^2 - b^2} \]</div>
+        <div class="math">\[ b = \sqrt{c^2 - a^2} \]</div>
+        <div class="math">\[ c = \sqrt{a^2 + b^2} \]</div>
+    </div>
+
     <script src="main.js"></script>
 </body>
 

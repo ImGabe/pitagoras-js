@@ -9,26 +9,30 @@ body {
     padding: 0;
     margin: 0 auto;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #title {
     font-family: 'Merriweather', serif;
 }
 
-#inputs {
+#result {
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.flex-center {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-flow: row wrap;
 }
 
-#result {
-    padding-top: 10px;
+.math {
+    padding-left: 2.6em;
+    padding-right: 2.6em; 
 }
 
-.text {
-    font-family: 'Open Sans', sans-serif;
-}
 .number-input {
     margin: 10px;
 }
