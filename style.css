@@ -31,3 +31,10 @@ body {
 .number-input {
     margin: 10px;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+      color: white;
+      background: #111;
+    }
+}
